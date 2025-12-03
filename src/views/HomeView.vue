@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import Menu from '../components/Menu.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <header>
+    <Menu />
+  </header>
 </template>
+
+<style scoped>
+header{
+  padding-top: 56px; /* space for fixed menu */
+}
+</style>
