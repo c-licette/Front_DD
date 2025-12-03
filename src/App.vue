@@ -1,82 +1,85 @@
 <script setup lang="ts">
-import { computed, provide, ref } from 'vue'
-import { useRoute } from 'vue-router'
-import SideBare from './components/SideBar.vue'
-import Menu from './components/Menu.vue'
-import { RouterView } from 'vue-router'
-
-const route = useRoute()
-
-const pageHeadings = ref<{ label: string; to?: string }[] | null>(null)
-
-provide('setPageHeadings', (items: { label: string; to?: string }[] | null) => {
-  pageHeadings.value = items
-})
-
-const sidebarFor = computed(() => {
-  if (pageHeadings.value && pageHeadings.value.length > 0) {
-    return {
-      title: 'Sommaire',
-      items: pageHeadings.value
-    }
-  }
-  return {
-    title: '',
-    items: []
-  }
-})
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <Menu />
-  <div class="layout-container">
-    <aside class="sidebar">
-      <SideBare :items="sidebarFor.items" :title="sidebarFor.title" />
-    </aside>
-    <main class="content">
-      <RouterView />
-    </main>
-  </div>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
 </template>
 
 <style scoped>
-:root {
-  --menu-height: 56px;
-  --sidebar-width: 250px;
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
-.layout-container {
-  display: flex;
-  margin-top: var(--menu-height);
-  height: calc(100vh - var(--menu-height));
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
 }
 
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: var(--menu-height);
-  width: var(--sidebar-width);
-  height: calc(100vh - var(--menu-height));
-  background: var(--sidebar-bg, #0f0f0f);
-  border-right: 1px solid #470f0f;
-  overflow-y: auto;
-  padding: 1rem;
-  z-index: 999;
-}
-
-.content {
-  margin-left: var(--sidebar-width);
-  width: calc(100% - var(--sidebar-width));
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-:deep(.content > *) {
-  max-width: 800px;
+nav {
   width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
