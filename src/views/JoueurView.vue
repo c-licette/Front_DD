@@ -1,0 +1,5 @@
+<template>
+  <div class="about">
+    <h1>Le Joueur</h1>
+  </div>
+</template>
