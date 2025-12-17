@@ -30,7 +30,7 @@ const sidebarFor = computed(() => {
 <template>
   <Menu />
   <div class="layout-container">
-    <aside class="sidebar">
+    <aside class="sidebar" v-if="$route.path !== '/'">
       <SideBare :items="sidebarFor.items" :title="sidebarFor.title" />
     </aside>
     <main class="content">
