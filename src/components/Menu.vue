@@ -53,6 +53,7 @@ const menuItems = computed(() => {
 </script>
 
 <template>
+	
 	<nav class="menu" aria-label="Main menu">
 		<ul class="menu-list">
 			<li v-for="item in menuItems" :key="item.label" class="menu-item" :class="{ 'has-submenu': item.children }">
@@ -65,6 +66,7 @@ const menuItems = computed(() => {
 			</li>
 		</ul>
 	</nav>
+	<img id="menu-logo" src="../assets/logo.png">
 </template>
 
 <style scoped>
@@ -77,8 +79,8 @@ const menuItems = computed(() => {
 	height: 56px;
 	display: flex;
 	align-items: center;
-	background: var(--menu-bg, #000000);
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+	background: /*var(--menu-bg, #000000)*/ rgba(255,255,255,0);
+	/*box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);*/
 	z-index: 1000;
 	overflow: visible; /* allow dropdowns to be visible outside the nav */
 }
@@ -100,7 +102,7 @@ const menuItems = computed(() => {
 }
 
 .menu-link {
-	color: #fff; /* ensure contrast on dark menu */
+	color: #000; /* ensure contrast on dark menu */
 	text-decoration: none;
 	padding: 0.25rem 0.5rem;
 	display: inline-block;
@@ -145,7 +147,7 @@ const menuItems = computed(() => {
 }
 
 .submenu-link {
-	color: #fff;
+	color: #8B6FA7;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	display: block;
@@ -157,6 +159,14 @@ const menuItems = computed(() => {
 	background: rgba(255, 255, 255, 0.1);
 	color: red;
 	padding-left: 1.2rem;
+}
+
+#menu-logo {
+	width: 500px;
+	height: 200px;
+	position: fixed;
+	top: 0;
+	right: 0;
 }
 </style>
 
