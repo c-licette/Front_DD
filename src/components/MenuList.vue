@@ -53,7 +53,7 @@ const menuItems = computed(() => {
 </script>
 
 <template>
-	
+
 	<nav class="menu" aria-label="Main menu">
 		<ul class="menu-list">
 			<li v-for="item in menuItems" :key="item.label" class="menu-item" :class="{ 'has-submenu': item.children }">
