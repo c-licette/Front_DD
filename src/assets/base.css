@@ -63,7 +63,8 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  background-image: url("ciel.png");
+  background-image: url("background.png");
+  background-position-y: 5%;
   background-size: 100%;
   transition:
     color 0.5s,

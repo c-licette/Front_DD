@@ -53,7 +53,10 @@ const menuItems = computed(() => {
 </script>
 
 <template>
-	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
 	<nav class="menu" aria-label="Main menu">
 		<ul class="menu-list">
 			<li v-for="item in menuItems" :key="item.label" class="menu-item" :class="{ 'has-submenu': item.children }">
@@ -89,9 +92,9 @@ const menuItems = computed(() => {
 	list-style: none;
 	display: flex;
 	gap: 1rem;
-	padding: 0 1rem;
+	padding: 5vw;
 	margin: 0;
-	justify-content: center;
+	/*justify-content: center;*/
 	align-items: center;
 	width: 100%;
 }
@@ -102,8 +105,10 @@ const menuItems = computed(() => {
 }
 
 .menu-link {
-	color: #000; /* ensure contrast on dark menu */
+	color: #D86C9D; /* ensure contrast on dark menu */
+	font-family: "Instrument Sans", serif;
 	text-decoration: none;
+	font-weight: bold;
 	padding: 0.25rem 0.5rem;
 	display: inline-block;
 	transition: all 0.2s ease;
@@ -147,8 +152,9 @@ const menuItems = computed(() => {
 }
 
 .submenu-link {
-	color: #8B6FA7;
+	color: #D86C9D;
 	text-decoration: none;
+	font-weight: bold;
 	padding: 0.5rem 1rem;
 	display: block;
 	transition: all 0.2s ease;
@@ -162,8 +168,8 @@ const menuItems = computed(() => {
 }
 
 #menu-logo {
-	width: 500px;
-	height: 200px;
+	width: 25vw;
+	height: 10vw;
 	position: fixed;
 	top: 0;
 	right: 0;

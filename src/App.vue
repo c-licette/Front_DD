@@ -46,7 +46,7 @@ const sidebarFor = computed(() => {
 }
 
 .layout-container {
-  display: flex;
+  /*display: flex;*/
   margin-top: var(--menu-height);
   height: calc(100vh - var(--menu-height));
 }
@@ -65,18 +65,18 @@ const sidebarFor = computed(() => {
 }
 
 .content {
-  margin-left: var(--sidebar-width);
+  /*margin-left: var(--sidebar-width);
   width: calc(100% - var(--sidebar-width));
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 :deep(.content > *) {
-  max-width: 800px;
-  width: 100%;
+  /*max-width: 800px;
+  width: 100%;*/
 }
 </style>
