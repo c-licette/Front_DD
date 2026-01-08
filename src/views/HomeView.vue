@@ -390,3 +390,12 @@
     color: #500500;
   }
 </style>
+
+<script lang="ts">
+export default {
+  mounted() {
+    document.documentElement.style.setProperty('--color-background', 'black');
+    document.documentElement.style.setProperty('--image-background', 'url("/src/assets/background.png")');
+  }
+}
+</script>

@@ -1,15 +1,26 @@
 <script setup lang="ts">
 import { computed, provide, ref } from 'vue'
+//import { useRoute } from 'vue-router'
 import SideBare from './components/SideBar.vue'
 import Menu from './components/MenuList.vue'
 import SearchBar from './components/SearchBar.vue'
 import { RouterView } from 'vue-router'
+
+//const route = useRoute()
 
 const pageHeadings = ref<{ label: string; to?: string }[] | null>(null)
 
 provide('setPageHeadings', (items: { label: string; to?: string }[] | null) => {
   pageHeadings.value = items
 })
+
+const activeHeadingId = ref<string | null>(null);
+
+const setActiveHeadingId = (id: string | null) => {
+  activeHeadingId.value = id;
+};
+
+provide('setActiveHeadingId', setActiveHeadingId);
 
 const sidebarFor = computed(() => {
   if (pageHeadings.value && pageHeadings.value.length > 0) {
@@ -26,13 +37,11 @@ const sidebarFor = computed(() => {
 </script>
 
 <template>
-  <div class="menu-container">
-    <Menu/>
-    <SearchBar v-model="search" />
-  </div>
+  <Menu />
+  <SearchBar v-model="search" />
   <div class="layout-container">
     <aside class="sidebar" v-if="$route.path !== '/'">
-      <SideBare :items="sidebarFor.items" :title="sidebarFor.title" />
+      <SideBare :items="sidebarFor.items" :title="sidebarFor.title" :activeId="activeHeadingId" />
     </aside>
     <main class="content">
       <RouterView />
@@ -54,7 +63,7 @@ const sidebarFor = computed(() => {
 }
 
 .layout-container {
-  /*display: flex;*/
+  display: flex;
   margin-top: var(--menu-height);
   height: calc(100vh - var(--menu-height));
 }
@@ -62,29 +71,33 @@ const sidebarFor = computed(() => {
 .sidebar {
   position: fixed;
   left: 0;
+  margin-left: 3vw;
+  margin-top: 3vw;
   top: var(--menu-height);
   width: var(--sidebar-width);
   height: calc(100vh - var(--menu-height));
-  background: var(--sidebar-bg, #0f0f0f);
-  border-right: 1px solid #470f0f;
+  background: var(--menu-background);
+  border-right: none;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 1rem;
   z-index: 999;
+  border-radius: 1vw;
 }
 
 .content {
-  /*margin-left: var(--sidebar-width);
+  margin-left: var(--sidebar-width);
   width: calc(100% - var(--sidebar-width));
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 2rem;
   display: flex;
-  justify-content: center;*/
+  justify-content: center;
 }
 
 :deep(.content > *) {
-  /*max-width: 800px;
-  width: 100%;*/
+  max-width: 800px;
+  width: 100%;
 }
 </style>
