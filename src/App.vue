@@ -37,18 +37,22 @@ const sidebarFor = computed(() => {
 </script>
 
 <template>
-  <Menu />
-  <SearchBar v-model="search" />
+  <header class="top-bar">
+    <Menu />
+    <SearchBar v-model="search"
+    class="search-fixed"/>
+  </header>
+
   <div class="layout-container">
     <aside class="sidebar" v-if="$route.path !== '/'">
       <SideBare :items="sidebarFor.items" :title="sidebarFor.title" :activeId="activeHeadingId" />
     </aside>
+
     <main class="content">
       <RouterView />
     </main>
   </div>
 </template>
-
 <style scoped>
 .menu-container {
   display: flex;
@@ -62,8 +66,34 @@ const sidebarFor = computed(() => {
   --sidebar-width: 250px;
 }
 
-.layout-container {
+/* 🔝 Barre du haut */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: var(--menu-height);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+  z-index: 1000;
+}
+.search-fixed {
+  position: fixed;
+  top: 1vw;              /* ajuste verticalement */
+  right: 13vw;           /* collée à droite */
+  z-index: 1100;
+}
+
+/* layout principal */
+.layout-container {
+<<<<<<< HEAD
+  display: flex;
+=======
+>>>>>>> 59b3cb8 (Je sais plus)
   margin-top: var(--menu-height);
   height: calc(100vh - var(--menu-height));
 }
@@ -87,6 +117,7 @@ const sidebarFor = computed(() => {
 
 .content {
   margin-left: var(--sidebar-width);
+<<<<<<< HEAD
   width: calc(100% - var(--sidebar-width));
   height: 100%;
   overflow-y: auto;
@@ -99,5 +130,8 @@ const sidebarFor = computed(() => {
 :deep(.content > *) {
   max-width: 800px;
   width: 100%;
+=======
+  padding: 2rem;
+>>>>>>> 59b3cb8 (Je sais plus)
 }
 </style>
