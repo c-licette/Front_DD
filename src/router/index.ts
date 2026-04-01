@@ -48,6 +48,7 @@ const router = createRouter({
       path: '/regles',
       name: 'regles',
       component: () => import('../views/ReglesView.vue'),
+      meta: {background: 'black'},
     },
     {
       path: '/joueur',

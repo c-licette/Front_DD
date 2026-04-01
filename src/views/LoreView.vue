@@ -10,6 +10,9 @@ onMounted(() => {
   if (!contentRef.value) return
   const headings = extractHeadings(contentRef.value)
   setPageHeadings?.(headings.map((h) => ({ label: h.label, to: h.to })))
+  document.documentElement.style.setProperty('--color-background', 'black');
+  document.documentElement.style.setProperty('--image-background', 'none');
+  document.documentElement.style.setProperty('--menu-background', '#A488E1');
 })
 
 onBeforeUnmount(() => {

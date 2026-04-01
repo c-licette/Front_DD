@@ -7,12 +7,11 @@
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #000000;
   transition: 0.4s;
-  padding: 3vw;
+  padding: 0.5vw;
 }
 
 @media (hover: hover) {
