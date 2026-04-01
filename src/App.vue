@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { computed, provide, ref } from 'vue'
-import { useRoute } from 'vue-router'
+//import { useRoute } from 'vue-router'
 import SideBare from './components/SideBar.vue'
-import Menu from './components/Menu.vue'
+import Menu from './components/MenuList.vue'
+import SearchBar from './components/SearchBar.vue'
 import { RouterView } from 'vue-router'
 
-const route = useRoute()
+//const route = useRoute()
 
 const pageHeadings = ref<{ label: string; to?: string }[] | null>(null)
 
@@ -29,6 +30,7 @@ const sidebarFor = computed(() => {
 
 <template>
   <Menu />
+  <SearchBar v-model="search" />
   <div class="layout-container">
     <aside class="sidebar" v-if="$route.path !== '/'">
       <SideBare :items="sidebarFor.items" :title="sidebarFor.title" />
