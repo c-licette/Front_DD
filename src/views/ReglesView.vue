@@ -8,6 +8,7 @@ const setActiveHeadingId = inject('setActiveHeadingId') as (id: string | null) =
 
 onMounted(() => {
   if (!contentRef.value) return
+  const midPoint = document.querySelector("#midPoint")
   const headings = extractHeadings(contentRef.value)
   setPageHeadings?.(headings.map((h) => ({ label: h.label, to: h.to })))
   document.documentElement.style.setProperty('--color-background', 'black');
@@ -15,7 +16,7 @@ onMounted(() => {
   document.documentElement.style.setProperty('--menu-background', '#8B6FA7');
 
   const headingList = contentRef.value.querySelectorAll('h1[id]');
-  const observer = new IntersectionObserver(
+  const observerMenu = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -26,14 +27,29 @@ onMounted(() => {
     { threshold: 0.5 } // Seuil de visibilité
   );
 
+  const observerTheme = new IntersectionObserver(([entry]) => {
+    if (entry.boundingClientRect.top > 0) {
+      document.documentElement.style.setProperty('--menu-background', '#8B6FA7');
+    }
+    else {
+      document.documentElement.style.setProperty('--menu-background', '#D86C9D');
+    }
+  });
+
   headingList.forEach((heading) => {
-    observer.observe(heading);
+    observerMenu.observe(heading);
+    if (midPoint){
+      observerTheme.observe(midPoint);
+    }
   });
 
   onBeforeUnmount(() => {
     headingList.forEach((heading) => {
-      observer.unobserve(heading);
+      observerMenu.unobserve(heading);
     });
+    if (midPoint){
+      observerTheme.unobserve(midPoint);
+    }
   });
 })
 
@@ -84,31 +100,42 @@ onBeforeUnmount(() => {
         <li>6/ Réussite critique - le lanceur échoue mais son action offre une opportunité à la situation.</li>
         <li>1/ Echec critique - le lanceur réussi mais prend un risque</li>
         <br>
-        <div class="examples">
-          <p>Exemples de lancer :</p>
-          <li>Léa, qui joue un Protecteur, veut frapper un ennemi avec une capacité de Force. Son personnage, habitué
-            aux batailles, a 4 dès. Elle fait 1, 3, 3 et 4, elle doit faire minimum 1 pour réussir son action. Son jet à
-            1 réussite et 2 échecs, mais avec un échec critique. Son personnage touche le Méchant par une attaque
-            faible, mais dans l'élan perd l'équilibre.</li>
-          <li>Zephyr, lui, joue un Interprète, qui n'a qu'un dé. Il fait 6 en communication. Son jet échoue, mais avec
-            une réussite critique. Son personnage rate sa négociation avec le PNJ, mais distrait le PNJ et provoque une
-            opportunité pour un allié.</li>
+        <div class="example">
+          <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
+            <path
+              d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
+              fill="#8B6FA7" />
+          </svg>
+          <div class="example-content">
+            <p>Exemples de lancer :</p>
+            <li>Léa, qui joue un Protecteur, veut frapper un ennemi avec une capacité de Force. Son personnage,
+              habitué
+              aux batailles, a 4 dès. Elle fait 1, 3, 3 et 4, elle doit faire minimum 1 pour réussir son action. Son
+              jet à
+              1 réussite et 2 échecs, mais avec un échec critique. Son personnage touche le Méchant par une attaque
+              faible, mais dans l'élan perd l'équilibre.</li>
+            <li>Zephyr, lui, joue un Interprète, qui n'a qu'un dé. Il fait 6 en communication. Son jet échoue, mais
+              avec
+              une réussite critique. Son personnage rate sa négociation avec le PNJ, mais distrait le PNJ et provoque
+              une
+              opportunité pour un allié.</li>
+          </div>
         </div>
       </div>
       <hr class="verticalSeparator" />
       <div class="sideContent">
-        <p class="sideText">Règles</p>
-        <p class="sideSeparator">·</p>
-        <p class="sideText2">Règles</p>
+        <p class="sideText first-color">Règles</p>
+        <p class="sideSeparator first-color">·</p>
+        <p class="sideText2 first-color">Règles</p>
       </div>
     </div>
     <br>
-    <hr class="horizontalSeparator" />
+    <hr id="midPoint" class="horizontalSeparator" />
     <div class="container">
       <div class="sideContent2">
-        <p class="sideText">Règles</p>
-        <p class="sideSeparator">·</p>
-        <p class="sideText2">Règles</p>
+        <p class="sideText second-color">Règles</p>
+        <p class="sideSeparator second-color">·</p>
+        <p class="sideText2 second-color">Règles</p>
       </div>
       <div class="content" ref="contentRef">
         <div class="separatorExample">
@@ -158,9 +185,11 @@ onBeforeUnmount(() => {
         </div>
         <br>
         <div class="example">
-          <!--<svg viewBox="0 0 175 100" preserveAspectRatio="none">
-            <path d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z" fill="#8B6FA7" />
-          </svg>-->
+          <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
+            <path
+              d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
+              fill="#D86C9D" />
+          </svg>
           <div class="example-content">
             <p>Exemples de lancer :</p>
             <li>Léa, qui joue un Protecteur, veut frapper un ennemi avec une capacité de Force. Son personnage,
@@ -280,7 +309,6 @@ li {
 }
 
 .sideText {
-  color: #DCF8F5;
   font-size: 6vw;
   transform: rotate(90deg) translate(5vw, 4vw);
   margin-top: 2vw;
@@ -291,7 +319,6 @@ li {
 }
 
 .sideSeparator {
-  color: #DCF8F5;
   font-size: 11vw;
   transform: rotate(90deg) translate(4vw, -1vw);
   margin-top: 2vw;
@@ -301,7 +328,6 @@ li {
 }
 
 .sideText2 {
-  color: #DCF8F5;
   font-size: 6vw;
   transform: rotate(90deg) translate(-5vw, -6vw);
   margin-top: 2vw;
@@ -309,7 +335,14 @@ li {
   font-weight: 500;
   white-space: nowrap;
   align-self: flex-end;
+}
 
+.first-color {
+  color: #8B6FA7;
+}
+
+.second-color {
+  color: #D86C9D;
 }
 
 .horizontalSeparator {
@@ -335,7 +368,7 @@ li {
   margin-bottom: 1vw;
 }*/
 
-.example {
+/*.example {
   margin-top: 1vw;
   margin-bottom: 1vw;
   width: 100%;
@@ -353,16 +386,40 @@ li {
       curve to 0vw 13vw with 0.1vw 29.5vw,
       curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
       close);
-  /*clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');*/
+  clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
   transform: translateX(-2vw);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}*/
+
+.example {
+  position: relative;
+  width: 100%;
+  transform: translateX(-1vw);
 }
 
-@media screen and (max-width: 600px) {
-  .example {
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.example-content {
+  padding: 3vw;
+  margin-left: 2vw;
+  padding-top: 5vw;
+  position: relative;
+  z-index: 1;
+  /*transform: translate(3vw, -20vw);*/
+}
+
+@media screen and (max-width: 800px) {
+
+  /*.example {
     margin-top: 1vw;
     margin-bottom: 1vw;
     width: 100%;
@@ -380,7 +437,7 @@ li {
         curve to 0vw 13vw with 0.1vw 29.5vw,
         curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
         close);
-    /*clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');*/
+    clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
     transform: translateX(-2vw);
     display: flex;
     align-items: center;
@@ -388,39 +445,10 @@ li {
     min-height: 30vw;
     overflow: hidden;
   }
-
+  */
   .example-content {
-    padding-top: 10vw;
+    padding-top: 17vw;
   }
-}
-
-.example-content {
-  padding: 2vw 5vw;
-  /*transform: translate(3vw, -20vw);*/
-}
-
-.top-left-example {
-  background-color: #8B6FA7;
-  width: 100%;
-  height: 30vw;
-  clip-path: shape(from 2vw 5vw,
-      curve to 13vw 0vw with 6vw 0vw,
-      hline by 1vw,
-      curve to 33vw 5vw with 18vw 0vw / 26vw 5vw,
-      curve to 39vw 4vw with 35vw 4.9vw / 38vw 4vw,
-      curve to 43vw 7vw with 41.5vw 4vw / 42.5vw 4.5vw,
-      vline by 20vw,
-      curve to 39vw 30vw with 43vw 28vw / 41vw 30vw,
-      hline by -34vw,
-      curve to 0vw 13vw with 0.1vw 29.5vw,
-      curve to 2vw 5vw with 0.1vw 7vw,
-      close);
-  /*clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');*/
-  z-index: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .example-content>* {
