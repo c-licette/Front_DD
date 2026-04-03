@@ -51,14 +51,14 @@ a.router-link-active {
 }
 
 li.active {
-  background-image: url("../assets/active_link_back.png");
+  background-image: var(--menu-selected-back);
   background-repeat: no-repeat;
   background-size: cover;
   width: calc(100% + 1.2vw);
 }
 
 li.active > * {
-  color: white
+  color: var(--menu-selected-color);
 }
 
 </style>

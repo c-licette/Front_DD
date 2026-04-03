@@ -14,6 +14,8 @@ onMounted(() => {
   document.documentElement.style.setProperty('--color-background', 'black');
   document.documentElement.style.setProperty('--image-background', 'none');
   document.documentElement.style.setProperty('--menu-background', '#8B6FA7');
+  document.documentElement.style.setProperty('--menu-selected-back', 'url("/src/assets/active_link_back_black.png")');
+  document.documentElement.style.setProperty('--menu-selected-color', 'white');
 
   const headingList = contentRef.value.querySelectorAll('h1[id]');
   const observerMenu = new IntersectionObserver(
@@ -100,7 +102,7 @@ onBeforeUnmount(() => {
         <li>6/ Réussite critique - le lanceur échoue mais son action offre une opportunité à la situation.</li>
         <li>1/ Echec critique - le lanceur réussi mais prend un risque</li>
         <br>
-        <div class="example">
+        <div class="example first-example">
           <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
             <path
               d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
@@ -184,7 +186,7 @@ onBeforeUnmount(() => {
           </div>
         </div>
         <br>
-        <div class="example">
+        <div class="example second-example">
           <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
             <path
               d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
@@ -396,8 +398,16 @@ li {
 
 .example {
   position: relative;
+  margin-top: 1vw;
   width: 100%;
-  transform: translateX(-1vw);
+}
+
+.first-example {
+  transform: translateX(-5vw);
+}
+
+.second-example {
+  transform: translateX(-2vw);
 }
 
 .bg {
