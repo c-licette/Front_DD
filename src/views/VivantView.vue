@@ -12,7 +12,7 @@ onMounted(() => {
   const headings = extractHeadings(contentRef.value)
   setPageHeadings?.(headings.map((h) => ({ label: h.label, to: h.to })))
   document.documentElement.style.setProperty('--color-background', 'white');
-  document.documentElement.style.setProperty('--image-background', 'none');
+  document.documentElement.style.setProperty('--image-background', 'url("/src/assets/background_light.png")');
   document.documentElement.style.setProperty('--menu-background', '#8B6FA7');
   document.documentElement.style.setProperty('--menu-selected-back', 'url("/src/assets/active_link_back_white.png")');
   document.documentElement.style.setProperty('--menu-selected-color', 'black');
@@ -311,8 +311,8 @@ li {
 }
 
 .sideText {
-  font-size: 6vw;
-  transform: rotate(90deg) translate(10vw, 8vw);
+  font-size: 5vw;
+  transform: rotate(90deg) translate(8vw, 7vw);
   margin-top: 2vw;
   letter-spacing: 0.5vw;
   font-weight: 500;
@@ -321,8 +321,8 @@ li {
 }
 
 .sideSeparator {
-  font-size: 11vw;
-  transform: rotate(90deg) translate(4vw, -1vw);
+  font-size: 10vw;
+  transform: rotate(90deg) translate(3vw, -0.5vw);
   margin-top: 2vw;
   letter-spacing: 0.5vw;
   font-weight: 500;
@@ -330,8 +330,8 @@ li {
 }
 
 .sideText2 {
-  font-size: 6vw;
-  transform: rotate(90deg) translate(-11vw, -10vw);
+  font-size: 5vw;
+  transform: rotate(90deg) translate(-9vw, -7vw);
   margin-top: 2vw;
   letter-spacing: 0.5vw;
   font-weight: 500;
