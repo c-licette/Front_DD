@@ -22,7 +22,7 @@
 
   --menu-background: #DCF8F5;
   --color-theme: #8B6FA7;
-  --menu-selected-back: url("src/assets/active_link_back_black.png");
+  --menu-selected-back: white;
   --menu-selected-color: black;
 }
 

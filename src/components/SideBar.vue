@@ -51,7 +51,16 @@ a.router-link-active {
 }
 
 li.active {
-  background-image: var(--menu-selected-back);
+  background-color: var(--menu-selected-back);
+  clip-path: shape(from 1vw 0.5vw,
+      hline by 10vw,
+      curve to 12.7vw 0vw with 12vw 0.5vw,
+      vline by 4vw,
+      curve to 11.5vw 3vw with 13vw 3vw,
+      hline by -10.5vw,
+      curve to 0vw 1.75vw with 0.2vw 2.9vw,
+      curve to 1vw 0.5vw with 0.1vw 0.7vw,
+    close);
   background-repeat: no-repeat;
   background-size: cover;
   width: calc(100% + 1.2vw);

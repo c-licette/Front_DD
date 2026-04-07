@@ -14,7 +14,7 @@ onMounted(() => {
   document.documentElement.style.setProperty('--color-background', 'white');
   document.documentElement.style.setProperty('--image-background', 'url("/src/assets/background_light.png")');
   document.documentElement.style.setProperty('--menu-background', '#8B6FA7');
-  document.documentElement.style.setProperty('--menu-selected-back', 'url("/src/assets/active_link_back_white.png")');
+  document.documentElement.style.setProperty('--menu-selected-back', 'white');
   document.documentElement.style.setProperty('--menu-selected-color', 'black');
 
   const headingList = contentRef.value.querySelectorAll('h1[id]');
