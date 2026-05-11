@@ -105,7 +105,7 @@ const menuItems = computed(() => {
 }
 
 .menu-link {
-	color: #D86C9D; /* ensure contrast on dark menu */
+	color: #D86C9D;
 	font-size: 1vw;
 	font-family: "Instrument Sans", serif;
 	text-decoration: none;
