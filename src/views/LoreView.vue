@@ -70,53 +70,25 @@ onBeforeUnmount(() => {
 
     <div class="container">
       <div class="content" ref="contentRef">
-        <h1 id="titre1">A/ Règles générales</h1>
-        <p>Contenu</p>
-
-        <h1 id="titre2">B/ Système de dés</h1>
-        <p>Pour réaliser une action, le joueur peut faire appel à plusieurs types de caractéristiques et répartit en
-          compétences du corps, de l'esprit et des interactions :</p>
-        <li>Corps : Force / Dextérité / Technique / Résistance</li>
-        <li>Esprit : Intuition / Savoir / Résilience</li>
-        <li>Interaction : Communication / Discernement / Survie / Nature</li>
+        <h1 id="titre1">Divinités</h1>
         <br>
-        <p>Chaque race a ses propres capacités et peut en acquérir.</p>
-        <br>
-        <p>
-          Lors d'une action, le joueur doit réaliser une épreuve aux dés. Il convient ensuite au MJ de décider quel
-          attribut et quelle compétence sont à utiliser. L'idée est Système/Base D6.
-        </p>
-        <p>Un personnage entraîné dans un domaine lancera plus de dés qu'un novice.</p>
-        <br>
-        <br>
-        <p>Conséquence par résultats :</p>
-        <p>Base Dé 6, résultats des lancés :</p>
-        <li>1,2,3/ Echec - le lanceur échoue son action</li>
-        <li>4,5/ Réussite - le lanceur réussit son action</li>
-        <li>6/ Réussite critique - le lanceur échoue mais son action offre une opportunité à la situation.</li>
-        <li>1/ Echec critique - le lanceur réussi mais prend un risque</li>
-        <br>
-        <div class="example first-example">
-          <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
-            <path
-              d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
-              fill="#8B6FA7" />
-          </svg>
-          <div class="example-content">
-            <p>Exemples de lancer :</p>
-            <li>Léa, qui joue un Protecteur, veut frapper un ennemi avec une capacité de Force. Son personnage,
-              habitué
-              aux batailles, a 4 dès. Elle fait 1, 3, 3 et 4, elle doit faire minimum 1 pour réussir son action. Son
-              jet à
-              1 réussite et 2 échecs, mais avec un échec critique. Son personnage touche le Méchant par une attaque
-              faible, mais dans l'élan perd l'équilibre.</li>
-            <li>Zephyr, lui, joue un Interprète, qui n'a qu'un dé. Il fait 6 en communication. Son jet échoue, mais
-              avec
-              une réussite critique. Son personnage rate sa négociation avec le PNJ, mais distrait le PNJ et provoque
-              une
-              opportunité pour un allié.</li>
-          </div>
-        </div>
+        <p>Monde millénaire et merveilleux, Lutéa renferme le meilleur, et surement le pire, de ce que la nature et la magie peut créer.</p></br>
+<br>
+<p>Au commencement, Retea s’ennuyait. Beaucoup. Iel vivait dans un plan vide, quoique merveilleux, des milliers de kilomètre (iel a compté) de nuages doux comme du coton, perturbé seulement par une brise légère.
+De peur de perturber son immense tranquillité, iel s’est décidé a créer un nouveau plan: {monde}
+Pour l’aider dans cette tâche, iel donne naissance à 3 divinités: Pros, dieu du Corps, Aéri, dieu de l’Esprit, et Démo, dieu du Monde. Mais son envie de contrôle et de perfection se trouve perturbée quand, 
+du chaos magique induit par la création de 3 divinités et un plan d’existence, Wras, dieu du Chaos, se matérialise.</p>
+<br>
+<li>- Pros/ personnalité</li>
+<li>- Aéri/ personnalité</li>
+<li>- Démo/ personnalité</li>
+<li>- Wras/ personnalité</li>
+<br>
+<p>Aujourd’hui, Retea reste caché-e dans son plan et se désintéresse complètement de la création qui lui a échappée, laissant le contrôle total à ses enfants légitimes. 
+  Sa dernière action avant uen retraite discutable aura été la formation d’un autre plan, minuscule, sombre et hostile, pour y enfermer {dieu Chaos} en espérant que cela suffise à faire disparaitre ses erreurs.</p>
+<br>
+        <h1 id="titre2">Géographie</h1>
+<p><i>Contenu</i></p>
       </div>
       <hr class="verticalSeparator" />
       <div class="sideContent">
@@ -137,106 +109,28 @@ onBeforeUnmount(() => {
         <div class="separatorExample">
           <hr class="verticalSeparator2" />
           <div>
-            <p>Difficultés par résultats : </p>
-            <li>1 : Presque évident</li>
-            <li>2,3 : Simple</li>
-            <li>4,5 : Complexe</li>
-            <li>6 : Pro</li>
-            <p>La difficulté est déterminée par le MJ, par exemple une puissante créature attaque : il faut faire 5
-              réussites pour l'esquiver. Le nombre de dés à lancer dépend du niveau et des compétences du joueur ou des
-              ennemis. Plus le niveau et les statistiques du joueur ou de l'ennemi est élevé, plus le nombre de dés
-              lancé
-              sera important, sans compter certains effets bonus.</p>
+            <h1 id="titre3">Langues & Peuples</h1>
             <br>
-            <h1 id="titre3">C/ Caractéristiques</h1>
+            <p>Dans Lutéa, on connait multiples espèces, peuples, cultures différentes, qui se mélangent tant bien que mal.</p>
             <br>
-            <p>Background - Capacité associée - Annotation</p>
-            <br>
-            <p>Éveillé - Donne accès à la magie aux races qui en sont dépourvues - Origine au choix (génie, amulette,
-              etc)
+            <p>Il y existe toute sorte de communautés, des méga-métropoles comme {Ville majeure}, ou les humains, elfes, et races mineures vivent en harmonies, aux plus petites tribu Roches de Chenyu, encore jamais approchées de l’extérieur.
             </p>
             <br>
-            <p>Ailé - Donne accès au vol aux races qui en sont dépourvues - Origine au choix </p>
+            <p>Si les peuples ont tous leurs variations régionales et culturelles, ils s’accordent sur une {langue commune} qui sera parlée dans les grandes villes, et par défaut entre des races différentes. </p>
             <br>
-            <p>Nature - Bonus connaissance milieu sauvage - Origine au choix</p>
-            <br>
-            <p>Apothicaire - Connaissance en plante - Sort mineur de soin à préparer </p>
-            <br>
-            <p>Voleur des rues - Furtif - Pas silencieux</p>
-            <br>
-            <p>Hannah Montana - Possède une 2e persona - Avantage à endosser le perso</p>
-            <br>
-            <p>Apôtre - Connexion privilègiée a 1 dieu - Bonus sur son dieu, malus sur les autres</p>
-            <br>
-            <p>Chanceux - Héritage magique - un objet magique</p>
-            <br>
-            <p>Marchand - Met gens en confiance - avantage en début de conversation </p>
-            <br>
-            <p>Medic - Connaissance corps - Augmente dégats</p>
-            <br>
-            <p>Pragmatique - Deteste toutes les religions - Résistance Magie</p>
-            <br>
-            <p>Pyromance - Self explanatory - Sort flamme mineur</p>
-          </div>
-        </div>
-        <br>
-        <div class="example second-example">
-          <svg class="bg" viewBox="0 0 160 100" preserveAspectRatio="none">
-            <path
-              d="M 0 50 C 3 -57 97 47 142 15 C 156 11 155.3333 21.6667 156 26 L 156 85 C 155 91 157 96 147 98 L 10 100 C 0 99 2 95 0 56 Z"
-              fill="#D86C9D" />
-          </svg>
-          <div class="example-content">
-            <p>Exemples de lancer :</p>
-            <li>Léa, qui joue un Protecteur, veut frapper un ennemi avec une capacité de Force. Son personnage,
-              habitué
-              aux batailles, a 4 dès. Elle fait 1, 3, 3 et 4, elle doit faire minimum 1 pour réussir son action. Son
-              jet à
-              1 réussite et 2 échecs, mais avec un échec critique. Son personnage touche le Méchant par une attaque
-              faible, mais dans l'élan perd l'équilibre.</li>
-            <li>Zephyr, lui, joue un Interprète, qui n'a qu'un dé. Il fait 6 en communication. Son jet échoue, mais
-              avec
-              une réussite critique. Son personnage rate sa négociation avec le PNJ, mais distrait le PNJ et provoque
-              une
-              opportunité pour un allié.</li>
           </div>
         </div>
         <br>
         <div class="separatorExample">
           <hr class="verticalSeparator2" />
           <div>
-            <h1 id="titre4">D/ Création personnage</h1>
-            <p>Créer l'histoire de ton personnage, que ça soit tes liens familiaux, tes amis, expériences. Une
-              personnalité
-              bien distincte, avec ses peurs et ses connaissances. Cela vous permettra de rendre votre plus vivant et
-              ainsi
-              de mieux vous plonger dans l'univers </p>
+            <h1 id="titre4">Magie & Corruption</h1>
+            <p>Lutéa a été créé, détruit, reconstruit et blessé par la magie. 
+              On y craint la corruption autant qu’on prie pour la lumière de Pros pour la guérison, et les anciens mettent en garde les têtes-brulées qui l’utilise sans raison. </p>
             <br>
-            <h1 id="titre5">E/ Social</h1>
-            <p>Contenu</p>
+            <p>Depuis la naissance de Wras, on sait comment la magie peut être destructrice. 
+              Pour autant, elle fait partie du quotidien de la plupart des habitants de Lutéa, sous multiple formes: alchimie, sortilèges, et les redoutés corrompu que l’on croise, parfois, et qui sont rarement ce qu’on attend.</p>
             <br>
-            <h1 id="titre6">F/ Objets</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre7">G/ Combats</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre8">H/ Corruption</h1>
-            <p>Échelle de Corruption </p>
-            <p>Dépendant de la classe</p>
-            <p>Confusion, irritabilité Roleplay - Maniement instinctif : Permet le maniement d'une arme d'une façon
-              “instinctive” voir quasi parfaite mais il se ferai davantage corrompu (ex:-1 santé mental)</p>
-            <p>Augmente une stat de +X jusqu'à la fin de l'évènement - Malus de Classe 1</p>
-            <p>Serviteur de l'ombre - Malus Social </p>
-            <p>Arrêt du temps 1mn - Malus de Classe 2</p>
-            <p>Appel au dieu du chaos : liste de sorts interdits - Devient Corrompu / Monstre</p>
-            <p>Pour descendre d'1 niveau de corruption, X repos avec X=niveau de corruption actuel </p>
-            <br>
-            <h1 id="titre9">I/ Expérience</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre10">J/ Glossaire</h1>
-            <p>Contenu</p>
           </div>
         </div>
       </div>
@@ -257,7 +151,7 @@ onBeforeUnmount(() => {
 .title>h1 {
   font-size: 6vw;
   font-family: "Lexend Exa", sans-serif;
-  color: #8B6FA7;
+  color: #D4D3D2;
 }
 
 .content {
@@ -351,45 +245,6 @@ li {
 .separatorExample {
   display: flex;
 }
-
-/*.examples {
-  background-image: url("../assets/exemple_back_purple.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 100%;
-  display: inline-block;
-  padding: 5vw 10vw;
-  transform: translateX(-10vw);
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-}*/
-
-/*.example {
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  width: 100%;
-  background-color: #8B6FA7;
-  height: 30vw;
-  clip-path: shape(from 2vw 5vw,
-      curve to 13vw 0vw with 8vw 0vw,
-      hline by 1vw,
-      curve to 48vw 5vw with 33vw 0vw / 41vw 5vw,
-      curve to 54vw 4vw with 50vw 4.9vw / 53vw 4vw,
-      curve to 58vw 7vw with 56.5vw 4vw / 57.5vw 4.5vw,
-      vline by 20vw,
-      curve to 54vw 30vw with 58vw 28vw / 56vw 30vw,
-      hline by -49vw,
-      curve to 0vw 13vw with 0.1vw 29.5vw,
-      curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
-      close);
-  clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
-  transform: translateX(-2vw);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
-
 .example {
   position: relative;
   margin-top: 1vw;
@@ -422,34 +277,6 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-
-  /*.example {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    width: 100%;
-    background-color: #8B6FA7;
-    height: fit-content;
-    clip-path: shape(from 2vw 5vw,
-        curve to 13vw 0vw with 8vw 0vw,
-        hline by 1vw,
-        curve to 48vw 5vw with 33vw 0vw / 41vw 5vw,
-        curve to 54vw 4vw with 50vw 4.9vw / 53vw 4vw,
-        curve to 58vw 7vw with 56.5vw 4vw / 57.5vw 4.5vw,
-        vline by 80vw,
-        curve to 54vw 30vw with 58vw 28vw / 56vw 30vw,
-        hline by -49vw,
-        curve to 0vw 13vw with 0.1vw 29.5vw,
-        curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
-        close);
-    clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
-    transform: translateX(-2vw);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 30vw;
-    overflow: hidden;
-  }
-  */
   .example-content {
     padding-top: 17vw;
   }

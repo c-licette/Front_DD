@@ -263,7 +263,7 @@ onBeforeUnmount(() => {
 .title>h1 {
   font-size: 6vw;
   font-family: "Lexend Exa", sans-serif;
-  color: #8B6FA7;
+  color: #D4D3D2;
 }
 
 .content {
@@ -356,44 +356,6 @@ li {
   display: flex;
 }
 
-/*.examples {
-  background-image: url("../assets/exemple_back_purple.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 100%;
-  display: inline-block;
-  padding: 5vw 10vw;
-  transform: translateX(-10vw);
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-}*/
-
-/*.example {
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  width: 100%;
-  background-color: #8B6FA7;
-  height: 30vw;
-  clip-path: shape(from 2vw 5vw,
-      curve to 13vw 0vw with 8vw 0vw,
-      hline by 1vw,
-      curve to 48vw 5vw with 33vw 0vw / 41vw 5vw,
-      curve to 54vw 4vw with 50vw 4.9vw / 53vw 4vw,
-      curve to 58vw 7vw with 56.5vw 4vw / 57.5vw 4.5vw,
-      vline by 20vw,
-      curve to 54vw 30vw with 58vw 28vw / 56vw 30vw,
-      hline by -49vw,
-      curve to 0vw 13vw with 0.1vw 29.5vw,
-      curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
-      close);
-  clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
-  transform: translateX(-2vw);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
-
 .example {
   position: relative;
   margin-top: 1vw;
@@ -422,38 +384,9 @@ li {
   padding-top: 5vw;
   position: relative;
   z-index: 1;
-  /*transform: translate(3vw, -20vw);*/
 }
 
 @media screen and (max-width: 800px) {
-
-  /*.example {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    width: 100%;
-    background-color: #8B6FA7;
-    height: fit-content;
-    clip-path: shape(from 2vw 5vw,
-        curve to 13vw 0vw with 8vw 0vw,
-        hline by 1vw,
-        curve to 48vw 5vw with 33vw 0vw / 41vw 5vw,
-        curve to 54vw 4vw with 50vw 4.9vw / 53vw 4vw,
-        curve to 58vw 7vw with 56.5vw 4vw / 57.5vw 4.5vw,
-        vline by 80vw,
-        curve to 54vw 30vw with 58vw 28vw / 56vw 30vw,
-        hline by -49vw,
-        curve to 0vw 13vw with 0.1vw 29.5vw,
-        curve to 2vw 5vw with 0.1vw 7vw / 1.6vw 5.5vw,
-        close);
-    clip-path: path('M 0 150 C 9 -171 291 141 426 45 C 468 33 466 65 468 78 L 468 255 C 465 273 471 288 441 294 L 30 300 C 0 297 6 285 0 168 Z');
-    transform: translateX(-2vw);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 30vw;
-    overflow: hidden;
-  }
-  */
   .example-content {
     padding-top: 17vw;
   }
