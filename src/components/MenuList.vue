@@ -23,6 +23,7 @@ const menuItems = computed(() => {
 					children: [
 						{ label: 'Races', href: '/vivant/races' },
 						{ label: 'Classes', href: '/vivant/classes' },
+                        { label: 'Passés', href: '/vivant/passes' },
 						{ label: 'Compagnons', href: '/vivant/compagnons' },
 						{ label: 'Bestiaire', href: '/vivant/bestiaire' }
 					]
@@ -34,7 +35,7 @@ const menuItems = computed(() => {
 					children: [
 						{ label: 'Créer une Fiche', href: '/joueur/creation' },
 						{ label: 'Fiches Joueurs', href: '/joueur/bibliotheque' },
-            { label: 'Fiches Communautés', href: '/joueur/commu' }
+                        { label: 'Fiches Communautés', href: '/joueur/commu' }
 
 
           ]
