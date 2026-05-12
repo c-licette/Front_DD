@@ -102,7 +102,7 @@ const sidebarFor = computed(() => {
   top: var(--menu-height);
   width: var(--sidebar-width);
   height: calc(100vh - var(--menu-height));
-  background: var(--menu-background);
+  background: transparent;
   border-right: none;
   overflow-x: hidden;
   overflow-y: auto;

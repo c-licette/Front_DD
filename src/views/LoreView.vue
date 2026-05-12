@@ -61,11 +61,6 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Creepster&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Karma:wght@300;400;500;600;700&family=Lexend+Exa:wght@100..900&display=swap"
-    rel="stylesheet">
   <div class="title">
     <h1 ref="titreRef">Lore</h1>
   </div>
@@ -210,7 +205,7 @@ onBeforeUnmount(() => {
         <div class="separatorExample">
           <hr class="verticalSeparator2" />
           <div>
-            <h1 id="titre4">D/ Création de personnage</h1>
+            <h1 id="titre4">D/ Création personnage</h1>
             <p>Créer l'histoire de ton personnage, que ça soit tes liens familiaux, tes amis, expériences. Une
               personnalité
               bien distincte, avec ses peurs et ses connaissances. Cela vous permettra de rendre votre plus vivant et

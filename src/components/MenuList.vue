@@ -174,10 +174,11 @@ const menuItems = computed(() => {
 }
 
 #menu-logo {
-    width: 25vw;
-    height: 10vw;
+    width: 120px;       /* taille fixe, ajuste selon ton goût */
+    height: auto;
     position: fixed;
-    top: 0;
-    right: -1vw;
+    top: -25px;
+    right: 15px;
+    z-index: 1000;      /* reste au dessus des autres éléments */
 }
 </style>

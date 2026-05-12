@@ -211,7 +211,7 @@ onBeforeUnmount(() => {
         <div class="separatorExample">
           <hr class="verticalSeparator2" />
           <div>
-            <h1 id="titre4">D/ Création de personnage</h1>
+            <h1 id="titre4">D/ Création personnage</h1>
             <p>Créer l'histoire de ton personnage, que ça soit tes liens familiaux, tes amis, expériences. Une
               personnalité
               bien distincte, avec ses peurs et ses connaissances. Cela vous permettra de rendre votre plus vivant et
@@ -284,8 +284,6 @@ li {
 
 .container {
   display: flex;
-
-
 }
 
 .sideContent {
