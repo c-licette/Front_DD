@@ -76,15 +76,15 @@ onBeforeUnmount(() => {
 
     <div class="container">
       <div class="content" ref="contentRef">
-        <h1 id="titre1">A/ Règles générales</h1>
+        <h1 id="titre1">Règles générales</h1>
         <p>Contenu</p>
 
-        <h1 id="titre2">B/ Système de dés</h1>
+        <h1 id="titre2">Système de dés</h1>
         <p>Pour réaliser une action, le joueur peut faire appel à plusieurs types de caractéristiques et répartit en
-          compétences du corps, de l'esprit et des interactions :</p>
-        <li>Corps : Force / Dextérité / Technique / Résistance</li>
-        <li>Esprit : Intuition / Savoir / Résilience</li>
-        <li>Interaction : Communication / Discernement / Survie / Nature</li>
+          compétences du corps, de l'esprit et des interactions :</p><br>
+        <li>Corps : Force / Dextérité / Technique / Résistance</li><br>
+        <li>Esprit : Intuition / Savoir / Résilience</li><br>
+        <li>Interaction : Communication / Discernement / Survie / Nature</li><br>
         <br>
         <p>Chaque race a ses propres capacités et peut en acquérir.</p>
         <br>
@@ -122,27 +122,7 @@ onBeforeUnmount(() => {
               une
               opportunité pour un allié.</li>
           </div>
-        </div>
-      </div>
-      <hr class="verticalSeparator" />
-      <div class="sideContent">
-        <p class="sideText first-color">Règles</p>
-        <p class="sideSeparator first-color">·</p>
-        <p class="sideText2 first-color">Règles</p>
-      </div>
-    </div>
-    <br>
-    <hr id="midPoint" class="horizontalSeparator" />
-    <div class="container">
-      <div class="sideContent2">
-        <p class="sideText second-color">Règles</p>
-        <p class="sideSeparator second-color">·</p>
-        <p class="sideText2 second-color">Règles</p>
-      </div>
-      <div class="content" ref="contentRef">
-        <div class="separatorExample">
-          <hr class="verticalSeparator2" />
-          <div>
+        </div><br>
             <p>Difficultés par résultats : </p>
             <li>1 : Presque évident</li>
             <li>2,3 : Simple</li>
@@ -154,36 +134,68 @@ onBeforeUnmount(() => {
               lancé
               sera important, sans compter certains effets bonus.</p>
             <br>
-            <h1 id="titre3">C/ Caractéristiques</h1>
-            <br>
-            <p>Background - Capacité associée - Annotation</p>
-            <br>
-            <p>Éveillé - Donne accès à la magie aux races qui en sont dépourvues - Origine au choix (génie, amulette,
-              etc)
-            </p>
-            <br>
-            <p>Ailé - Donne accès au vol aux races qui en sont dépourvues - Origine au choix </p>
-            <br>
-            <p>Nature - Bonus connaissance milieu sauvage - Origine au choix</p>
-            <br>
-            <p>Apothicaire - Connaissance en plante - Sort mineur de soin à préparer </p>
-            <br>
-            <p>Voleur des rues - Furtif - Pas silencieux</p>
-            <br>
-            <p>Hannah Montana - Possède une 2e persona - Avantage à endosser le perso</p>
-            <br>
-            <p>Apôtre - Connexion privilègiée a 1 dieu - Bonus sur son dieu, malus sur les autres</p>
-            <br>
-            <p>Chanceux - Héritage magique - un objet magique</p>
-            <br>
-            <p>Marchand - Met gens en confiance - avantage en début de conversation </p>
-            <br>
-            <p>Medic - Connaissance corps - Augmente dégats</p>
-            <br>
-            <p>Pragmatique - Deteste toutes les religions - Résistance Magie</p>
-            <br>
-            <p>Pyromance - Self explanatory - Sort flamme mineur</p>
-          </div>
+            <h1 id="titre3">Caractéristiques</h1><br>
+            <h2>Corps</h2><br>
+              <p>Tout ce qui a trait au corps</p><br>
+              <li>Force</li>
+              <p>Puissance musculaire, capacité à infliger des dégâts à main nue</p>
+              <p><i>Ex: taper sur un garde, casser une porte</i></p><br>
+              <li>Dextérité</li>
+              <p>Capacité à mouvoir son corps dans l’environnement</p>
+              <p><i>Ex: faire un salto, esquiver, se déplacer sur un terrain difficile</i></p><br>
+              <li>Technique</li>
+              <p>Motricité fine, détails manuels</p>
+              <p><i>Ex: nouer un noeud, crocheter une porte</i></p><br>
+              <li>Résistance</li>
+              <p>Capacité à encaisser des dégâts physiques sans le laisser paraître</p>
+              <p><i>Ex: résister au poison, ne pas plier à la torture</i></p><br>
+
+            <h2>Esprit</h2><br>
+              <p>Tout ce qui à trait à l’esprit</p><br>
+              <li>Intuition</li>
+              <p>Capacité a observer et déduire des faits du monde autour</p>
+              <p><i>Ex: trouver des pièges, comprendre un plan</i></p><br>
+              <li>Savoir</li>
+              <p>Accumulation des connaissances</p>
+              <p><i>Ex: comprendre une langue, savoir faire une potion</i></p><br>
+              <li>Résilience</li>
+              <p>Capacité à encaisser des tensions mentales sans le laisser paraître</p>
+              <p><i>Ex: résister a une manipulation, un sort mental</i></p><br>
+
+            <h2>Monde</h2><br>
+              <p>Interactions avec le monde</p><br>
+              <li>Communication</li>
+              <p>Capacité a comprendre et se faire comprendre d’autrui</p>
+              <p><i>Ex: demander une direction, faire un discours</i></p><br>
+              <li>Discernement</li>
+              <p>Capacité a deviner les intentions et les secrets d’autrui</p>
+              <p><i>Ex: identifier les opposants, comprendre le sous texte</i></p><br>
+              <li>Survie</li>
+              <p>Capacité à s’adapter a l’environnement</p>
+              <p><i>Ex: allumer un feu, trouver le meilleur bar</i></p><br>
+              <li>Nature</li>
+              <p>Capacité à interagir avec la faune et la flore locale</p>
+              <p><i>Ex: maintenir une plante en vie, calmer un ours</i></p><br>
+      </div>
+      <hr class="verticalSeparator" />
+      <div class="sideContent">
+        <p class="sideText first-color">Règles</p>
+        <p class="sideSeparator first-color">·</p>
+        <p class="sideText2 first-color">Règles</p>
+      </div>
+    </div>
+    
+    <br>
+    <hr id="midPoint" class="horizontalSeparator" />
+    <div class="container">
+      <div class="sideContent2">
+        <p class="sideText second-color">Règles</p>
+        <p class="sideSeparator second-color">·</p>
+        <p class="sideText2 second-color">Règles</p>
+      </div>
+      <div class="content" ref="contentRef">
+        <div class="separatorExample">
+          <hr class="verticalSeparator2" />
         </div>
         <br>
         <div class="example second-example">
@@ -211,37 +223,44 @@ onBeforeUnmount(() => {
         <div class="separatorExample">
           <hr class="verticalSeparator2" />
           <div>
-            <h1 id="titre4">D/ Création personnage</h1>
-            <p>Créer l'histoire de ton personnage, que ça soit tes liens familiaux, tes amis, expériences. Une
-              personnalité
-              bien distincte, avec ses peurs et ses connaissances. Cela vous permettra de rendre votre plus vivant et
-              ainsi
-              de mieux vous plonger dans l'univers </p>
+            <h1 id="titre4">Objets</h1>
+
             <br>
-            <h1 id="titre5">E/ Social</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre6">F/ Objets</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre7">G/ Combats</h1>
-            <p>Contenu</p>
-            <br>
-            <h1 id="titre8">H/ Corruption</h1>
-            <p>Échelle de Corruption </p>
-            <p>Dépendant de la classe</p>
+            <h1 id="titre5">Combats</h1>
+            <p>Les combats se déroulent au tour à tour, divisé en “instants”. Ils sont ordonnées en phases:</p><br>
+            <li>Initiative: chaque PJ annonce son niveau en Intuition, et le MJ construit l’ordre de passage. 
+              Si 2 personnes sont à égalité, on fera un jet de dés. Les PNJ jouent en second.
+            <ul>
+              <li>En cas d’attaque surprise, l’ordre de passage est établi sur le Discernement, et les auteur-ices ont 1 mouvement et 2 actions.</li>
+            </ul></li><br>
+            <li>Mouvement: chaque tour, un personnage peut se déplacer de 7m (et voler de 7m pour celle-eux qui en ont la capacité)<ul>
+            <li>Les terrains difficiles abaissent la distance de mouvement à 3m</li>
+            </ul></li><br>
+            <li>Action: chaque joueur peut utiliser son action comme iel le souhaite:
+              <ul>
+                <li>Attaquer</li>
+                <li>Lancer un projectile</li>
+                <li>Se déplacer de 7m max</li>
+                <li>Lancer un sort</li>
+                <li>Utiliser une arme</li>
+                <li>Utiliser un objet magique</li>
+              </ul>
+            </li><br>
+            <h1 id="titre6">Corruption</h1>
+            <h2>Échelle de Corruption </h2><br>
+            <p>Dépendant de la classe</p><br>
             <p>Confusion, irritabilité Roleplay - Maniement instinctif : Permet le maniement d'une arme d'une façon
-              “instinctive” voir quasi parfaite mais il se ferai davantage corrompu (ex:-1 santé mental)</p>
-            <p>Augmente une stat de +X jusqu'à la fin de l'évènement - Malus de Classe 1</p>
-            <p>Serviteur de l'ombre - Malus Social </p>
-            <p>Arrêt du temps 1mn - Malus de Classe 2</p>
-            <p>Appel au dieu du chaos : liste de sorts interdits - Devient Corrompu / Monstre</p>
+              “instinctive” voir quasi parfaite mais il se ferai davantage corrompu (ex:-1 santé mental)</p><br>
+            <p>Augmente une stat de +X jusqu'à la fin de l'évènement - Malus de Classe 1</p><br>
+            <p>Serviteur de l'ombre - Malus Social </p><br>
+            <p>Arrêt du temps 1mn - Malus de Classe 2</p><br>
+            <p>Appel au dieu du chaos : liste de sorts interdits - Devient Corrompu / Monstre</p><br>
             <p>Pour descendre d'1 niveau de corruption, X repos avec X=niveau de corruption actuel </p>
             <br>
-            <h1 id="titre9">I/ Expérience</h1>
+            <h1 id="titre7">Expérience</h1>
             <p>Contenu</p>
             <br>
-            <h1 id="titre10">J/ Glossaire</h1>
+            <h1 id="titre8">Glossaire</h1>
             <p>Contenu</p>
           </div>
         </div>
