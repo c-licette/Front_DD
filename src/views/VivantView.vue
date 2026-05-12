@@ -76,9 +76,25 @@ onBeforeUnmount(() => {
 
     <div class="container">
       <div class="content" ref="contentRef">
-        <h1 id="titre1">A/ Règles générales</h1>
-        <p>Contenu</p>
-
+        <h1 id="titre1">Les Races</h1>
+        <h2>Humain-es</h2><br>
+          <p>Race la plus répandue et commune, les humaines et humains sont à l’origine d’une grande partie des métropoles de {monde}: {noms de villes ??}. 
+          Iels sont connu-es pour leur grande sociabilité et adaptabilité à toute situation, quoiqu’iels gardent une préférence pour leur propre espèce. 
+          Iels ont tendance à se mouler dans leur environnement en valeurs, et code moraux.</p>
+          <p>Iels ne maitrisent pas la magie.</p><br>
+        <h3>Où vivent-iels?</h3><br>
+          <p>Nomades comme sédentaires, iels s’adaptent très facilement à de nouveaux peuples et environnements, même s’il existe des villes majoritairement humaines.</p><br>
+        <h3>Leur point de vue sur le monde</h3><br>
+          <p>Dépendant de leur environnement social et géographique, va se conformer à ce qui les entoure.</p><br>
+        <h3>Classes typique</h3><br>
+          <p>Peuvent se conformer à toutes les classes non-magiques, avec un avantage naturel pour les Traducteur-ice</p><br>
+        <h3>Bonus de stats</h3><br>
+          <p>+1 dans chaque compétence au choix de Corps, d’Esprit, et de Monde.</p><br>
+        <h3>Vue sur la corruption</h3><br>
+          <p>Peut dépendre d’un individu à l’autre, mais garde un tabou autour de la manipulation mentale non-consentie d’un humain sur un autre, et auront tendance à être méfiant.</p>
+          <p>Certains humains ont un point de vue très extreme, positif ou négatif, sur la corruption.</p><br>
+        
+        
         <h1 id="titre2">B/ Système de dés</h1>
         <p>Pour réaliser une action, le joueur peut faire appel à plusieurs types de caractéristiques et répartit en
           compétences du corps, de l'esprit et des interactions :</p>
