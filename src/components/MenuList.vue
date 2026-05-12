@@ -53,16 +53,9 @@ const menuItems = computed(() => {
 </script>
 
 <template>
-<<<<<<< HEAD
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
-=======
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
->>>>>>> 59b3cb8 (Je sais plus)
 	<nav class="menu" aria-label="Main menu">
 		<ul class="menu-list">
 			<li v-for="item in menuItems" :key="item.label" class="menu-item" :class="{ 'has-submenu': item.children }">
@@ -111,16 +104,6 @@ const menuItems = computed(() => {
 }
 
 .menu-link {
-<<<<<<< HEAD
-	color: #D86C9D;
-	font-size: 1vw;
-	font-family: "Instrument Sans", serif;
-	text-decoration: none;
-	font-weight: bold;
-	padding: 0.25rem 0.5rem;
-	display: inline-block;
-	transition: all 0.2s ease;
-=======
     color: #D86C9D; /* ensure contrast on dark menu */
     font-family: "Instrument Sans", serif;
     text-decoration: none;
@@ -128,14 +111,20 @@ const menuItems = computed(() => {
     padding: 0.25rem 0.5rem;
     display: inline-block;
     transition: all 0.2s ease;
->>>>>>> 59b3cb8 (Je sais plus)
 }
 
 .menu-link:hover {
     opacity: 0.95;
-    color: red;
+    color: palevioletred;
 }
 
+.menu-link:focus,
+.menu-link:focus-visible,
+.submenu-link:focus,
+.submenu-link:focus-visible {
+    outline: 2px solid #D86C9D;
+    border-radius: 6px;
+}
 /* Submenu styles */
 .submenu {
     list-style: none;
@@ -180,7 +169,7 @@ const menuItems = computed(() => {
 
 .submenu-link:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: red;
+    color: palevioletred;
     padding-left: 1.2rem;
 }
 

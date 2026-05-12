@@ -255,7 +255,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .title {
-  place-items: center;
+  text-align: center;
   padding-bottom: 10vw;
   padding-top: 5vw;
 }
@@ -263,7 +263,7 @@ onBeforeUnmount(() => {
 .title>h1 {
   font-size: 6vw;
   font-family: "Lexend Exa", sans-serif;
-  color: #1A9A8B;
+  color: #8B6FA7;
 }
 
 .content {

@@ -59,14 +59,8 @@ watch(isExpanded, async (val) => {
 .search-container {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  justify-content: center;
-  width: 55px;
-  height: 45px;
-=======
   width: 48px;
   height: 40px;
->>>>>>> 59b3cb8 (Je sais plus)
   background-color: #FBCEB7;
   border-radius: 999px;
   padding: 0 14px;

@@ -66,7 +66,6 @@ onBeforeUnmount(() => {
   <link
     href="https://fonts.googleapis.com/css2?family=Creepster&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Karma:wght@300;400;500;600;700&family=Lexend+Exa:wght@100..900&display=swap"
     rel="stylesheet">
-
   <div class="title">
     <h1 ref="titreRef">Lore</h1>
   </div>
@@ -255,7 +254,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .title {
-  place-items: center;
+  text-align: center;
   padding-bottom: 10vw;
   padding-top: 5vw;
 }
@@ -263,7 +262,7 @@ onBeforeUnmount(() => {
 .title>h1 {
   font-size: 6vw;
   font-family: "Lexend Exa", sans-serif;
-  color: #D4D3D2;
+  color: #8B6FA7;
 }
 
 .content {

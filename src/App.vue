@@ -90,10 +90,6 @@ const sidebarFor = computed(() => {
 
 /* layout principal */
 .layout-container {
-<<<<<<< HEAD
-  display: flex;
-=======
->>>>>>> 59b3cb8 (Je sais plus)
   margin-top: var(--menu-height);
   height: calc(100vh - var(--menu-height));
 }
@@ -117,21 +113,6 @@ const sidebarFor = computed(() => {
 
 .content {
   margin-left: var(--sidebar-width);
-<<<<<<< HEAD
-  width: calc(100% - var(--sidebar-width));
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-:deep(.content > *) {
-  max-width: 800px;
-  width: 100%;
-=======
-  padding: 2rem;
->>>>>>> 59b3cb8 (Je sais plus)
 }
 </style>
