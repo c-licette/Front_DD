@@ -312,8 +312,8 @@ li {
 
 .sideText {
   font-size: 5vw;
-  transform: rotate(90deg) translate(8vw, 7vw);
-  margin-top: 2vw;
+  transform: rotate(90deg) translate(8vw, 8vw);
+  margin-top:5vw;
   letter-spacing: 0.5vw;
   font-weight: 500;
   white-space: nowrap;
@@ -331,7 +331,7 @@ li {
 
 .sideText2 {
   font-size: 5vw;
-  transform: rotate(90deg) translate(-9vw, -7vw);
+  transform: rotate(90deg) translate(-12.5vw, -8vw);
   margin-top: 2vw;
   letter-spacing: 0.5vw;
   font-weight: 500;
