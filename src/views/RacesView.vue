@@ -319,36 +319,6 @@ li {
   display: flex;
 }
 
-.example {
-  position: relative;
-  margin-top: 1vw;
-  width: 100%;
-}
-
-.first-example {
-  transform: translateX(-5vw);
-}
-
-.second-example {
-  transform: translateX(-2vw);
-}
-
-.bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.example-content {
-  padding: 3vw;
-  margin-left: 2vw;
-  padding-top: 5vw;
-  position: relative;
-  z-index: 1;
-  /*transform: translate(3vw, -20vw);*/
-}
 
 @media screen and (max-width: 800px) {
 
@@ -357,7 +327,4 @@ li {
   }
 }
 
-.example-content>* {
-  color: #000000;
-}
 </style>
